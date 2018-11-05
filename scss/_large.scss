@@ -22,4 +22,10 @@ main {
     width: 25% - $gutterDbl;
     float: left;
   }
+
+  div.blog article{
+    width: 33.33% - $gutterDbl;
+    float: left;
+  }
 }
+
