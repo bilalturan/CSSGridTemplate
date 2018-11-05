@@ -89,10 +89,28 @@ footer {
 
 /* ---------------------- MAIN ----------------------------- */
 main {
+  figure.banner {
+    width: 100%;
+  }
+
+  figure.banner img {
+    width: 100%;
+  }
   h1 {
     font-size: 2rem;
     margin: 1rem 20px 0 $gutter; // top, right, bottom, left
     color: $primaryColor;
+  }
+
+  hr.fadeAway {
+    background: linear-gradient(
+      to right,
+      rgba(66, 78, 108, 1) 0%,
+      rgba(66, 78, 100, 0.01) 100%
+    );
+    height: 2px;
+    border: none;
+    margin: 0 $gutter; // top/bottom, left/right
   }
 }
 
