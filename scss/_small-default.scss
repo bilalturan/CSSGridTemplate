@@ -87,6 +87,15 @@ footer {
   }
 }
 
+/* ---------------------- MAIN ----------------------------- */
+main {
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 20px 0 $gutter; // top, right, bottom, left
+    color: $primaryColor;
+  }
+}
+
 /* -------- Clearfix: Force an Element not to collapse ------- */
 .clearfix:after {
   content: "";
