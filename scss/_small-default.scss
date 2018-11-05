@@ -22,8 +22,24 @@ body {
 header {
   background: $primaryColor;
   color: $secondaryColor;
-
   padding: 1rem $gutter;
+
+  form {
+    float: right;
+  }
+
+  form input {
+    width: 6rem;
+    border-radius: 10px;
+    margin-right: 2%;
+    padding: 0.2rem;
+    border: none;
+    transition: width 0.5s;
+  }
+
+  form input:focus {
+    width: 8rem;
+  }
 
   h1 {
     font-size: 2rem;
@@ -103,13 +119,13 @@ main {
     color: $primaryColor;
   }
 
-  h2{
+  h2 {
     font-size: 1.5rem;
-    margin: .75rem 0 0 $gutter;
+    margin: 0.75rem 0 0 $gutter;
     color: lighten($primaryColor, 10%);
   }
 
-  h3{
+  h3 {
     font-size: 1.2rem;
     color: lighten($primaryColor, 20%);
   }
@@ -145,9 +161,32 @@ main {
   }
 }
 
-div.blog article{
-  margin: .5rem $gutter;
+div.blog article {
+  margin: 0.5rem $gutter;
   width: 100% - $gutterDbl;
+}
+
+div.pop {
+  background-color: $accent;
+  text-align: center;
+  clear: both;
+  padding: 1rem 0;
+
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 2rem;
+    font-weight: $boldWeight;
+  }
+  .copy {
+    padding: 0.5rem 0;
+  }
+  .copy span {
+    font-size: 3rem;
+    color: $primaryColor;
+    font-weight: $boldWeight;
+  }
 }
 
 /* -------- Clearfix: Force an Element not to collapse ------- */
