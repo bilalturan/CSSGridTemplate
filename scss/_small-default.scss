@@ -11,12 +11,85 @@ html {
   box-sizing: border-box;
 }
 
-// Overall styling for the navigation of the document
+/* ---------------------- BODY ------------------------------- */
+body {
+  font-family: $defaulFont;
+  font-weight: $normalWeight;
+  font-size: 16px;
+}
 
+/* ---------------------- HEADER ----------------------------- */
+header {
+  background: $primaryColor;
+  color: $secondaryColor;
 
+  padding: 1rem $gutter;
 
-// Overall styling for the MAIN of the document
+  h1 {
+    font-size: 2rem;
+    font-weight: $normalWeight;
+  }
 
+  h2 {
+    font-size: 1.05rem;
+    font-weight: $normalWeight;
+  }
+}
 
+/* ---------------------- NAVIGATION ----------------------------- */
+nav {
+  background-color: $secondaryColor;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
-// Overall styling for the FOOTER of the document
+  ul li {
+    float: left;
+    width: 25%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul li:last-child {
+    border-right: none;
+  }
+
+  ul li a {
+    display: block;
+    text-align: center;
+    font-weight: $boldWeight;
+    padding: 0.5rem 0;
+    color: $primaryColor;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  ul li.active a {
+    background-color: darken($secondaryColor, 10%);
+  }
+
+  ul li a:hover {
+    color: $secondaryColor;
+    background-color: $primaryColor;
+  }
+}
+
+/* ---------------------- FOOTER ----------------------------- */
+footer {
+  width: 100%;
+  background-color: $primaryColor;
+
+  p {
+    text-align: center;
+    color: $secondaryColor;
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  }
+
+  p a {
+    color: $secondaryColor;
+  }
+}
+
+/* -------- Clearfix: Force an Element not to collapse ------- */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
