@@ -1,0 +1,25 @@
+/* ---------------------- NAVIGATION ----------------------------- */
+nav {
+  ul{
+    margin-left: $gutter;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  ul li {
+    width: auto;
+  }
+  ul li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  ul li a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ---------------------- MAIN ----------------------------- */
+main {
+  figure.photo {
+    width: 25% - $gutterDbl;
+    float: left;
+  }
+}

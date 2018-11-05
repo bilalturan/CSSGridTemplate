@@ -96,10 +96,27 @@ main {
   figure.banner img {
     width: 100%;
   }
+
   h1 {
     font-size: 2rem;
-    margin: 1rem 20px 0 $gutter; // top, right, bottom, left
+    margin: 1rem 0 0 $gutter; // top, right, bottom, left
     color: $primaryColor;
+  }
+
+  h2{
+    font-size: 1.5rem;
+    margin: .75rem 0 0 $gutter;
+    color: lighten($primaryColor, 10%);
+  }
+
+  h3{
+    font-size: 1.2rem;
+    color: lighten($primaryColor, 20%);
+  }
+
+  p {
+    line-height: 130%;
+    color: $fontColor;
   }
 
   hr.fadeAway {
@@ -112,6 +129,25 @@ main {
     border: none;
     margin: 0 $gutter; // top/bottom, left/right
   }
+
+  figure.photo {
+    width: 100% - $gutterDbl;
+    margin: 0.5rem $gutter; // top/bottom, left/right
+  }
+
+  figure.photo img {
+    width: 100%;
+  }
+
+  figure.photo figcaption {
+    text-align: center;
+    color: $primaryColor;
+  }
+}
+
+div.blog article{
+  margin: .5rem $gutter;
+  width: 100% - $gutterDbl;
 }
 
 /* -------- Clearfix: Force an Element not to collapse ------- */
