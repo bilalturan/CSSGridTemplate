@@ -1,197 +1,65 @@
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-/*  apply a natural box layout model to all elements  */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* ---------------------- BODY ------------------------------- */
+html,
 body {
-  font-family: $defaulFont;
-  font-weight: $normalWeight;
-  font-size: 16px;
+  font-family: arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-/* ---------------------- HEADER ----------------------------- */
-header {
-  background: $primaryColor;
-  color: $secondaryColor;
-  padding: 1rem $gutter;
-
-  form {
-    float: right;
-  }
-
-  form input {
-    width: 6rem;
-    border-radius: 10px;
-    margin-right: 2%;
-    padding: 0.2rem;
-    border: none;
-    transition: width 0.5s;
-  }
-
-  form input:focus {
-    width: 8rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-    font-weight: $normalWeight;
-  }
-
-  h2 {
-    font-size: 1.05rem;
-    font-weight: $normalWeight;
-  }
+body {
+  padding: 1em;
 }
 
-/* ---------------------- NAVIGATION ----------------------------- */
-nav {
-  background-color: $secondaryColor;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-
-  ul li {
-    float: left;
-    width: 25%;
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-  }
-  ul li:last-child {
-    border-right: none;
-  }
-
-  ul li a {
-    display: block;
-    text-align: center;
-    font-weight: $boldWeight;
-    padding: 0.5rem 0;
-    color: $primaryColor;
-    text-decoration: none;
-    transition: background 0.25s ease, color 0.25s ease;
-  }
-
-  ul li.active a {
-    background-color: darken($secondaryColor, 10%);
-  }
-
-  ul li a:hover {
-    color: $secondaryColor;
-    background-color: $primaryColor;
-  }
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
-/* ---------------------- FOOTER ----------------------------- */
-footer {
-  width: 100%;
-  background-color: $primaryColor;
-
-  p {
-    text-align: center;
-    color: $secondaryColor;
-    padding: 0.75rem 0;
-    font-size: 0.9rem;
-  }
-
-  p a {
-    color: $secondaryColor;
-  }
-}
-
-/* ---------------------- MAIN ----------------------------- */
-main {
-  figure.banner {
-    width: 100%;
-  }
-
-  figure.banner img {
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 2rem;
-    margin: 1rem 0 0 $gutter; // top, right, bottom, left
-    color: $primaryColor;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin: 0.75rem 0 0 $gutter;
-    color: lighten($primaryColor, 10%);
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    color: lighten($primaryColor, 20%);
-  }
-
-  p {
-    line-height: 130%;
-    color: $fontColor;
-  }
-
-  hr.fadeAway {
-    background: linear-gradient(
-      to right,
-      rgba(66, 78, 108, 1) 0%,
-      rgba(66, 78, 100, 0.01) 100%
-    );
-    height: 2px;
-    border: none;
-    margin: 0 $gutter; // top/bottom, left/right
-  }
-
-  figure.photo {
-    width: 100% - $gutterDbl;
-    margin: 0.5rem $gutter; // top/bottom, left/right
-  }
-
-  figure.photo img {
-    width: 100%;
-  }
-
-  figure.photo figcaption {
-    text-align: center;
-    color: $primaryColor;
-  }
-}
-
-div.blog article {
-  margin: 0.5rem $gutter;
-  width: 100% - $gutterDbl;
-}
-
-div.pop {
-  background-color: $accent;
+.grid-item {
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 1em;
+  padding: 1em;
+  overflow: hidden;
   text-align: center;
-  clear: both;
-  padding: 1rem 0;
-
-  .title {
-    font-size: 2.5rem;
-  }
-  .subtitle {
-    font-size: 2rem;
-    font-weight: $boldWeight;
-  }
-  .copy {
-    padding: 0.5rem 0;
-  }
-  .copy span {
-    font-size: 3rem;
-    color: $primaryColor;
-    font-weight: $boldWeight;
-  }
 }
 
-/* -------- Clearfix: Force an Element not to collapse ------- */
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.grid-item-header {
+  background-color: #a62e5c;
+  grid-area: header;
+}
+
+.grid-item-navigation {
+  background-color: #9bc850;
+  grid-area: navigation;
+}
+
+.grid-item-content {
+  background-color: #9bc850;
+  grid-area: content;
+}
+
+.grid-item-sidebar {
+  background-color: #9bc850;
+  grid-area: sidebar;
+}
+
+.grid-item-footer {
+  background-color: #a62e5c;
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  height: calc(100vh - 2em);
+  grid: 4.4em 1em 3.6em 1em 1fr 1em 3.6em 1em 4.4em / 1fr;
+  grid-template-areas:
+    "header"
+    "."
+    "navigation"
+    "."
+    "content"
+    "."
+    "sidebar"
+    "."
+    "footer";
 }

@@ -1,43 +1,9 @@
-/* ---------------------- BODY ----------------------------- */
-body {
-  background-image: url("../images/polonez_car.png");
+.grid-container {
+  grid: 4.4em 1em 1fr 1em 4.4em / 20% 1em 1fr 1em 20%;
+  grid-template-areas: 
+  "header header header header header"
+  ". . . . ."
+  "navigation . content . sidebar"
+  ". . . . ."
+  "footer footer footer footer footer";
 }
-
-div#wrapper {
-  max-width: 80rem;
-  margin: 2rem auto;
-  box-shadow: 0 0 10px #000000;
-  background-color: #fff;
-}
-
-/* ---------------------- NAVIGATION ----------------------------- */
-nav {
-  ul{
-    margin-left: $gutter;
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
-  }
-  ul li {
-    width: auto;
-  }
-  ul li:last-child {
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-  }
-
-  ul li a {
-    padding: 0.5rem 1rem;
-  }
-}
-
-/* ---------------------- MAIN ----------------------------- */
-main {
-  figure.photo {
-    width: 25% - $gutterDbl;
-    float: left;
-  }
-
-  div.blog article{
-    width: 33.33% - $gutterDbl;
-    float: left;
-  }
-}
-

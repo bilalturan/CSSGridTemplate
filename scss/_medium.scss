@@ -1,12 +1,11 @@
-/* ---------------------- MAIN ----------------------------- */
-main {
-  figure.photo {
-    width: 50% - $gutterDbl;
-    float: left;
-  }
-
-  div.blog article{
-    width: 50% - $gutterDbl;
-    float: left;
-  }
+.grid-container {
+  grid: 4.4em 1em 3.6em 1em 1fr 1em 4.4em / 1fr 1em 30%;
+  grid-template-areas:
+  "header header header"
+  ". . ."
+  "navigation navigation navigation"
+  ". . ."
+  "content . sidebar"
+  ". . ."
+  "footer footer footer";
 }

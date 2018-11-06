@@ -4,167 +4,38 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR SIZE -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ <!-- TELLS PHONES NOT TO LIE ABOUT THEIR SIZE -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>ACME: Our products</title>
-
-    <!-- EMB GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
-
-    <!-- STYLE SHEETS -->
+    <title>CSS Grid layout</title>
+   
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="grid-container">
+		
+    <header class="grid-item grid-item-header">
+        <h1>Header</h1>
+    </header>
+    
+    <nav class="grid-item grid-item-navigation">
+        <h1>Nav</h1>
+    </nav>	
+    
+    <article class="grid-item grid-item-content">
+        <h1>Main Content</h1>
+    </article>
+    
+    <aside class="grid-item grid-item-sidebar">
+        <h1>Sidebar</h1>
+    </aside>
 
-    <div id="wrapper">
+    
+    <footer class="grid-item grid-item-footer">
+        <h1>Footer</h1>
+    </footer>
 
-        <!-- PAGE HEADER GOES HERE -->
-        <header>
-            <h1>Paul's Autos</h1>
-            <h2>Quality you can ride in</h2>
-        </header>
-
-
-        <!-- PAGE NAVIGATION GOES HERE -->
-        <nav class="clearfix">
-            <ul class="clearfix">
-                <li class="active"><a href="index.html">New</a></li>
-                <li><a href="used.html">Used</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="loaction.html">Location</a></li>
-            </ul>
-        </nav>
-
-
-        <!-- PAGE CONTENT GOES HERE -->
-        <main class="clearfix">
-
-            <figure class="banner">
-                <img src="images/banner01.jpg" alt="banner of a car">
-            </figure>
-
-            <h1>New cars</h1>
-            <hr class="fadeAway">
-
-            <div>
-
-                <figure class="photo">
-                    <img src="images/black.jpg" alt="black car">
-                    <figcaption>SALE: 200.00 kr</figcaption>
-                </figure>
-
-                <figure class="photo">
-                    <img src="images/blue.jpg" alt="blue car">
-                    <figcaption>SALE: 250.00 kr</figcaption>
-                </figure>
-
-                <figure class="photo">
-                    <img src="images/red.jpg" alt="red car">
-                    <figcaption>SALE: 300.00 kr</figcaption>
-                </figure>
-
-                <figure class="photo">
-                    <img src="images/silver.jpg" alt="silver car">
-                    <figcaption>SALE: 350.00 kr</figcaption>
-                </figure>
-
-                <div class="pop">
-                    <p class="title">Summer's on us</p>
-                    <p class="subtitle">Sales Event</p>
-                    <p class="copy"> payments for 5 months</p>
-                    <p class="copy"> % interest for 5 months</p>
-                </div>
-
-                <h2>Blog Topics</h2>
-                <div class="blog">
-                    <article>
-                        <h3>Topic 1</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta in quos sapiente vel,
-                            repellat
-                            totam obcaecati! Autem assumenda cum, hic voluptatum maiores sequi debitis veritatis
-                            commodi
-                            voluptate, veniam incidunt magni!</p>
-                    </article>
-                    <article>
-                        <h3>Topic 2</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe doloremque quis id, alias
-                            iure
-                            fuga. Ducimus et, officia perspiciatis rem ipsum, sit voluptatibus exercitationem velit
-                            doloribus eos quam nulla! Dicta.</p>
-                    </article>
-                    <article>
-                        <h3>Topic 3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime labore sequi in odio magnam
-                            minus consequatur ex obcaecati corrupti, distinctio officiis atque, placeat corporis
-                            consectetur, quasi tempore error reiciendis illo!</p>
-                    </article>
-                    <article>
-                        <h3>Topic 4</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptates debitis enim
-                            deleniti
-                            temporibus, quia nostrum, consequatur voluptatum illum nobis dolores rem suscipit quod ab
-                            consectetur maxime voluptas, magnam quisquam?</p>
-                    </article>
-                    <article>
-                        <h3>Topic 5</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quia a repellat ullam
-                            id
-                            magni eum hic aperiam quo repudiandae quidem, eius suscipit in ipsam placeat doloribus,
-                            illum
-                            dolorum nemo.</p>
-                    </article>
-                    <article>
-                        <h3>Topic 6</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptate officiis aperiam
-                            perferendis? Sit sequi vitae illo labore numquam ad, unde sunt possimus laborum neque hic,
-                            est
-                            aliquid expedita qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-                            quia a repellat ullam id
-                            magni eum hic aperiam quo repudiandae quidem, eius suscipit in ipsam placeat doloribus,
-                            illum
-                            dolorum nemo.</p>
-                    </article>
-                    <article>
-                        <h3>Topic 7</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam qui, distinctio, sed atque
-                            a
-                            quas deleniti architecto, harum libero expedita nobis ipsa asperiores reprehenderit facilis
-                            molestias. Eligendi suscipit dolorem deserunt! Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Consequuntur quia a repellat ullam id
-                            magni eum hic aperiam quo repudiandae quidem, eius suscipit in ipsam placeat doloribus,
-                            illum
-                            dolorum nemo.</p>
-                    </article>
-                    <article>
-                        <h3>Topic 8</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius iure illum ipsa aspernatur.
-                            Ea
-                            odio vitae eos consequatur itaque porro quasi magni unde libero rem! Sequi nisi itaque sunt
-                            deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quia a
-                            repellat
-                            ullam id
-                            magni eum hic aperiam quo repudiandae quidem, eius suscipit in ipsam placeat doloribus,
-                            illum
-                            dolorum nemo.</p>
-                    </article>
-                </div>
-
-            </div>
-        </main>
-
-
-        <!-- PAGE FOOTER GOES HERE -->
-        <footer>
-            <p>&copy;2017 Paul's Auto &bull;
-                <a href="tel: +4561306169">+45 61306169</a>
-            </p>
-        </footer>
-
-    </div>
 </body>
 
 </html>
